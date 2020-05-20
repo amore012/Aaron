@@ -1,9 +1,7 @@
 const fs = require('fs');
-// import { readFileSync } from 'fs';
-const arrow = require('apache-arrow');
-// import { Table } from 'apache-arrow';
+const arrow = require ('apache-arrow');
 
-const arrowObj = fs.readFileSync('simple.arrow');
-const table = arrow.Table.from([arrowObj]);
+const arrowtable = fs.readFileSync('simple.json');
+const table = arrow.Table.from(arrowtable);
 
-console.log(table.toString());
+console.log(table);
